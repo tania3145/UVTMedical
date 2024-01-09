@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UVT Medical</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/client.css">
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> UVT Medical </a>
+
+    <nav class="navbar">
+        <a href="#">Hello, Maria Ionescu</a>
+        <a href="#" class="btn"> Log Out <span class="fas fa-chevron-right"></span> </a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- booking section starts   -->
+
+<section class="book" id="book">
+
+    <h1 class="heading"> <span>book</span> now </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="image/book-img.svg" alt="">
+        </div>
+
+        <form action="">
+            <h3>Book Appointment</h3>
+            <input type="text" placeholder="Enter your name" class="box" id="name">
+            <input type="number" placeholder="Enter your phone number" class="box" id="phone">
+            <input type="email" placeholder="Enter your email adress" class="box" id="email">
+            <input type="doctor" placeholder="Enter your doctors name" class="box" id="doctor">
+            
+            <select size="5" id="doctor-list">
+              <option value="Doctor 1">Dr. T.A. Comerford</option>
+              <option value="Doctor 2">Mr. Roy Braun</option>
+              <option value="Doctor 3">Dr. C. Knutson</option>
+              <option value="Doctor 4">Dr. M. A. Elharram</option>
+              <option value="Doctor 5">Dr. S. Belanger</option>
+              <option value="Doctor 6">Dr. A. Melicharkova</option>
+              <option value="Doctor 7">Dr. M. Li</option>
+              <option value="Doctor 8">Dr. J. Deo</option>
+            </select>
+            
+            <input type="date" class="box" id="date">
+            <input type="submit" value="Book Now" class="btn">
+          </form> 
+
+        <script>
+            const doctorInput = document.querySelector('#doctor');
+            const dropdownMenu = document.querySelector('#doctor-list');
+
+            dropdownMenu.style.display = 'none';
+            dropdownMenu.style.position = 'absolute';
+            dropdownMenu.style.zIndex = 1;
+
+            doctorInput.addEventListener('click', () => {
+            if (dropdownMenu.style.display === 'none') {
+                dropdownMenu.style.display = 'block';
+            } else {
+                dropdownMenu.style.display = 'none';
+            }
+            });
+
+            dropdownMenu.addEventListener('click', (event) => {
+                const items = dropdownMenu.querySelectorAll('option');
+                items.forEach((item) => item.classList.remove('selected'));
+                event.target.classList.add('selected');
+
+                doctorInput.value = event.target.innerText;
+            });
+        </script>
+
+    </div>
+
+</section>
+
+<!-- booking section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer" id="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Contact</h3>
+            <a href="#"> <i class="fas fa-envelope"></i> andrei.cerbanescu01@e-uvt.ro </a>
+            <a href="#"> <i class="fas fa-envelope"></i> tania.curutchi01@e-uvt.ro </a>
+            <a href="#"> <i class="fas fa-envelope"></i> alexandru.farcas01@e-uvt.ro </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Bulevardul Vasile Pârvan 4, Timișoara, 300223 </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
