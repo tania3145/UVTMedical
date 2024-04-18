@@ -1,1 +1,2 @@
 # UVTMedical
+Created a website named ”UVTMedical” using HTML and CSS as part of a team project, focusing on UI/UX components. This website provides user registration featuring patients, doctors and administrators. Patients have access to details about available specializations and the ability to schedule appointments with their doctors. Doctors can view the medical history of each patient and the upcoming appointments. The administrator manages data regarding patients and doctors but also organizes medical equipment records.
